@@ -1,0 +1,13 @@
+[project]
+name = "phase5-generation"
+version = "0.1.0"
+description = "Phase 5: Text generation with various decoding strategies"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

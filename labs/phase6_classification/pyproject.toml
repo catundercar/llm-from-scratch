@@ -1,0 +1,13 @@
+[project]
+name = "phase6-classification"
+version = "0.1.0"
+description = "Phase 6: Fine-tuning a pretrained GPT for text classification"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

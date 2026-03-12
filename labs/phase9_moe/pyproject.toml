@@ -1,0 +1,13 @@
+[project]
+name = "phase9-moe"
+version = "0.1.0"
+description = "Phase 9: Mixture of Experts (MoE)"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,13 @@
+[project]
+name = "phase8-instruction-tuning"
+version = "0.1.0"
+description = "Phase 8: Instruction Fine-Tuning (SFT + DPO)"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

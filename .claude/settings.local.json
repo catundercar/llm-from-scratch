@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:cs336.stanford.edu)",
+      "Bash(cd /Users/tulip/project/llm-from-scratch/website && npm install 2>&1 | tail -5)",
+      "Bash(npm run:*)",
+      "Bash(echo \"=== Lab File Count ===\" && find /Users/tulip/project/llm-from-scratch/labs -name \"*.py\" | wc -l && echo \"\" && echo \"=== Website Build ===\" && npm run build 2>&1 | tail -8 && echo \"\" && echo \"=== All Phases ===\" && ls -d /Users/tulip/project/llm-from-scratch/labs/phase*/)",
+      "Bash(find ~/.claude/plugins/cache/course-builder-local -type f -name \"*.md\" 2>/dev/null | head -20)",
+      "WebFetch(domain:deepwiki.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:jums.gitbook.io)",
+      "Bash(wc -l /Users/tulip/project/llm-from-scratch/website/src/data/lessons*.ts)",
+      "Bash(grep -c \"lessonId\" /Users/tulip/project/llm-from-scratch/website/src/data/lessons*.ts)"
+    ]
+  }
+}
