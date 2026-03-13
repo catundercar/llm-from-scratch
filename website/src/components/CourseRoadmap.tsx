@@ -123,6 +123,7 @@ const CourseRoadmap: React.FC = () => {
               navigate(`/phase/${phaseId}/lesson/1`)
             }
             t={t}
+            locale={locale}
           />
         )}
         {activeTab === "architecture" && <ArchitectureTab t={t} />}
@@ -142,7 +143,8 @@ const RoadmapTab: React.FC<{
   onToggle: (id: number) => void;
   onEnterLesson: (phaseId: number) => void;
   t: (key: string) => string;
-}> = ({ phases, expandedPhase, onToggle, onEnterLesson, t }) => {
+  locale: import("../i18n/LocaleContext").Locale;
+}> = ({ phases, expandedPhase, onToggle, onEnterLesson, t, locale }) => {
   return (
     <div style={{ position: "relative" }}>
       {phases.map((phase, idx) => {
