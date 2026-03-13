@@ -167,13 +167,20 @@ const CourseRoadmap: React.FC = () => {
           borderTop: "1px solid #18181B",
           padding: "24px 32px",
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          gap: 6,
+          gap: 12,
           fontSize: 12,
           color: "#52525B",
         }}
       >
+        <img
+          src="https://hits.sh/llm-from-scratch.catuc.club.svg?style=flat-square&color=27272A&labelColor=18181B&label=visitors&extraCount=0"
+          alt="visitor count"
+          style={{ height: 18, borderRadius: 3 }}
+        />
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
         <span>Built with</span>
         <a
           href="https://github.com/catundercar/course-builder-plugin"
@@ -195,6 +202,7 @@ const CourseRoadmap: React.FC = () => {
           </svg>
           course-builder-plugin
         </a>
+        </div>
       </footer>
     </div>
   );
