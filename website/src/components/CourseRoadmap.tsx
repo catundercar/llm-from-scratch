@@ -176,7 +176,7 @@ const CourseRoadmap: React.FC = () => {
         }}
       >
         <img
-          src="https://hits.sh/llm-from-scratch.catuc.club.svg?style=flat-square&color=27272A&labelColor=18181B&label=visitors&extraCount=0"
+          src="https://hits.sh/catundercar/llm-from-scratch.svg?style=flat-square&color=27272A&labelColor=18181B&label=visitors"
           alt="visitor count"
           style={{ height: 18, borderRadius: 3 }}
         />
