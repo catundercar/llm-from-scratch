@@ -1,52 +1,52 @@
 # LLM From Scratch
 
-从零开始构建大语言模型 — 一门手把手的实战课程，带你用 Python + PyTorch 从 Tokenizer 一路搭建到 Mixture of Experts。
+Build a large language model from scratch — a hands-on course that walks you through Python + PyTorch, from Tokenizer all the way to Mixture of Experts.
 
-**[线上课程网站](https://catundercar.github.io/llm-from-scratch/)**
+**[Course Website](https://catundercar.github.io/llm-from-scratch/)** · [中文版](README.zh-CN.md)
 
-## 课程概览
+## Course Overview
 
-| Phase | 主题 | 关键概念 |
-|-------|------|----------|
-| 0 | 全景图：Transformer 与 LLM | 整体架构、数据流、核心组件 |
-| 1 | 文本与数据 | Tokenizer (BPE)、DataLoader、Embedding |
-| 2 | 注意力机制 | Self-Attention、Multi-Head Attention、因果遮罩 |
-| 3 | Transformer 架构 | GPT Block、LayerNorm、残差连接 |
-| 4 | 预训练 | 语言建模损失、训练循环、学习率调度 |
-| 5 | 文本生成 | Temperature、Top-k、Top-p 采样 |
-| 6 | 分类微调 | 迁移学习、分类头、冻结策略 |
-| 7 | LoRA | 低秩适配、参数高效微调 |
-| 8 | 指令微调 | SFT、DPO、对话格式 |
-| 9 | 混合专家 | MoE 路由、稀疏激活、负载均衡 |
+| Phase | Topic | Key Concepts |
+|-------|-------|--------------|
+| 0 | Big Picture: Transformer & LLM | Overall architecture, data flow, core components |
+| 1 | Text & Data | Tokenizer (BPE), DataLoader, Embedding |
+| 2 | Attention Mechanism | Self-Attention, Multi-Head Attention, Causal Mask |
+| 3 | Transformer Architecture | GPT Block, LayerNorm, Residual Connections |
+| 4 | Pre-training | Language Modeling Loss, Training Loop, LR Scheduling |
+| 5 | Text Generation | Temperature, Top-k, Top-p Sampling |
+| 6 | Classification Fine-tuning | Transfer Learning, Classification Head, Freezing Strategy |
+| 7 | LoRA | Low-Rank Adaptation, Parameter-Efficient Fine-tuning |
+| 8 | Instruction Tuning | SFT, DPO, Conversation Format |
+| 9 | Mixture of Experts | MoE Routing, Sparse Activation, Load Balancing |
 
-## 快速开始
+## Quick Start
 
-### 环境准备
+### Setup
 
 ```bash
-# 克隆仓库
+# Clone the repo
 git clone https://github.com/catundercar/llm-from-scratch.git
 cd llm-from-scratch
 
-# 安装 Python 依赖
+# Install Python dependencies
 pip install -r requirements.txt
 ```
 
-### 运行 Lab
+### Run a Lab
 
-每个 Phase 都是独立的 Python 包，包含骨架代码（带 TODO）、测试和评分脚本：
+Each Phase is a standalone Python package with skeleton code (TODO markers), tests, and a grading script:
 
 ```bash
 cd labs/phase1_text_and_data
 
-# 运行测试
+# Run tests
 pytest tests/ -v
 
-# 查看成绩
+# Check your score
 python scripts/grade.py
 ```
 
-### 本地运行课程网站
+### Run the Course Website Locally
 
 ```bash
 cd website
@@ -54,41 +54,41 @@ npm install
 npm run dev
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 llm-from-scratch/
-├── labs/                        # 实战 Lab（Python + PyTorch）
-│   ├── shared/                  # 跨 Phase 共用工具
+├── labs/                        # Hands-on Labs (Python + PyTorch)
+│   ├── shared/                  # Shared utilities across phases
 │   ├── phase1_text_and_data/    # Phase 1: Tokenizer + DataLoader
 │   ├── phase2_attention/        # Phase 2: Self-Attention
 │   ├── phase3_transformer/      # Phase 3: GPT Block
-│   ├── phase4_pretraining/      # Phase 4: 预训练
-│   ├── phase5_generation/       # Phase 5: 文本生成
-│   ├── phase6_classification/   # Phase 6: 分类微调
+│   ├── phase4_pretraining/      # Phase 4: Pre-training
+│   ├── phase5_generation/       # Phase 5: Text Generation
+│   ├── phase6_classification/   # Phase 6: Classification Fine-tuning
 │   ├── phase7_lora/             # Phase 7: LoRA
 │   ├── phase8_instruction_tuning/ # Phase 8: SFT + DPO
 │   └── phase9_moe/              # Phase 9: MoE
-├── website/                     # 课程网站（Vite + React + TypeScript）
-├── COURSE.md                    # 课程完整内容
-├── course-roadmap.jsx           # 课程路线图原型
-└── requirements.txt             # Python 依赖
+├── website/                     # Course website (Vite + React + TypeScript)
+├── COURSE.md                    # Full course content
+├── course-roadmap.jsx           # Course roadmap prototype
+└── requirements.txt             # Python dependencies
 ```
 
-## 技术栈
+## Tech Stack
 
-- **Lab**: Python 3.10+, PyTorch 2.0+, tiktoken
+- **Labs**: Python 3.10+, PyTorch 2.0+, tiktoken
 - **Website**: Vite, React 18, TypeScript, React Router
-- **部署**: GitHub Pages (自动部署)
+- **Deployment**: GitHub Pages (auto-deploy on push)
 
-## 课程设计理念
+## Design Philosophy
 
-1. **由底向上** — 从最底层的 Tokenizer 开始，逐层搭建到完整的 LLM
-2. **概念先行** — 每个 Lab 前先理解 WHY，再动手 HOW
-3. **骨架填空** — 框架和测试已写好，你只需实现核心算法（TODO 标记处）
-4. **即时反馈** — 每个 Phase 完成后都有可运行的成果
+1. **Bottom-up** — Start from the lowest-level Tokenizer and build layer by layer up to a full LLM
+2. **Concept first** — Understand the WHY before implementing the HOW
+3. **Skeleton fill-in** — Framework and tests are provided; you implement the core algorithms (TODO markers)
+4. **Immediate feedback** — Each Phase produces a runnable artifact you can test
 
-## 参考资料
+## References
 
 - [Build a Large Language Model (From Scratch)](https://github.com/rasbt/LLMs-from-scratch) — Sebastian Raschka
 - [LLM Course](https://github.com/mlabonne/llm-course) — Maxime Labonne
