@@ -25,7 +25,13 @@
       "Bash(find *)",
       "Bash(ls *)",
       "Bash(cd * && *)",
-      "Read(/Users/tulip/project/llm-from-scratch/**)"
+      "Read(/Users/tulip/project/llm-from-scratch/**)",
+      "Bash(echo $SHELL)",
+      "Read(//Users/tulip/**)",
+      "Bash(gh api:*)",
+      "Bash(gh workflow:*)",
+      "Bash(gh run:*)",
+      "Bash(grep -n \"footer\\\\|Footer\\\\|header\\\\|Header\\\\|nav\\\\|Nav\\\\|GitHub\\\\|github\" /Users/tulip/project/llm-from-scratch/website/src/App.tsx 2>/dev/null | head -20\ngrep -rn \"footer\\\\|Footer\\\\|github\\\\|GitHub\" /Users/tulip/project/llm-from-scratch/website/src --include=\"*.tsx\" -l)"
     ]
   }
 }

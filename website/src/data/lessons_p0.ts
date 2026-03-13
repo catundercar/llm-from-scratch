@@ -599,7 +599,7 @@ const phase0ContentZhCN: PhaseContent = {
             { type: "paragraph", text: "先从 Tokenizer 开始。假设你要教一个外星人读中文，你会怎么教？" },
             { type: "paragraph", text: "方案 A：一个字一个字教。「这是『人』，这是『大』，这是『天』...」字符级（character-level）tokenization 就是这个思路。好处是词汇表超小（中文常用字不到 5000 个），坏处是序列变得超长——一篇 1000 字的文章就是 1000 个 token。Attention 的计算量是 O(T²)，序列太长直接爆炸。" },
             { type: "paragraph", text: "方案 B：一个词一个词教。「这是『人工智能』，这是『深度学习』...」词级（word-level）tokenization。好处是序列短了，坏处是碰到没教过的词就傻了——「你好吗」如果不在词汇表里，模型直接懵。而且词汇表会变得巨大（中文的词组合何止百万），embedding 表的内存占用会爆炸。" },
-            { type: "paragraph", text: "方案 C：教它「偏旁部首」加「常用词」。常见的词保持完整（「你好」），罕见的词拆成有意义的子片段（「量子纠缠」→「量子」+「纠」+「缠」）。这就是 BPE（Byte-Pair Encoding）——在字符级和词级之间找到了甜蜜点，通常用 ~50K 个 subword token。" },
+            { type: "paragraph", text: "方案 C：教它「偏旁部首」加「常用词」。常见的词保持完整（「你好」），罕见的词拆成有意义的子片段（「量子纠缠」→「量子」+「纠」+「缠」）。这就是 BPE（Byte-Pair Encoding）——在字符级和词级之间找到了最佳平衡点，通常用 ~50K 个 subword token。" },
             { type: "heading", level: 3, text: "Tokenizer 的隐藏影响力" },
             { type: "paragraph", text: "这里有一个很容易被忽略的事实：Tokenizer 是 LLM 最被低估的组件。很多 LLM 的「愚蠢」行为其实是 tokenization 的锅。" },
             { type: "callout", variant: "warning", text: "经典案例：模型数不清 \"strawberry\" 里有几个 r。为什么？因为 tokenizer 可能把它切成 \"straw\" + \"berry\"，模型看到的根本不是单独的字母！同样，简单的算术错误往往因为数字被切成了意想不到的 token 组合。下次看到 LLM 做出「愚蠢」的回答，先想想——是不是 tokenizer 的锅？" },
