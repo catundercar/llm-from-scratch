@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useLocale } from "../i18n";
 import { getLesson, getPhaseContent, getLessonCount, getPhases } from "../data";
@@ -12,6 +12,8 @@ const LessonPage: React.FC = () => {
 
   const phaseId = Number(pid);
   const lessonId = Number(lid);
+
+  useEffect(() => { window.scrollTo(0, 0); }, [phaseId, lessonId]);
   const lesson = getLesson(phaseId, lessonId, locale);
   const phaseContent = getPhaseContent(phaseId, locale);
   const phases = getPhases(locale);
