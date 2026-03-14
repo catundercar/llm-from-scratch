@@ -3,6 +3,10 @@ import { Sidebar } from "@/components/layout/sidebar";
 import { Footer } from "@/components/layout/footer";
 import { LocaleProvider } from "@/i18n";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "zh-CN" }, { locale: "zh-TW" }];
+}
+
 export default function LocaleLayout({
   children,
 }: {
