@@ -1,5 +1,5 @@
-import type { PhaseContent } from "./types";
-import type { Locale } from "../i18n/LocaleContext";
+import type { PhaseContent } from "@/data/types";
+import type { Locale } from "@/i18n";
 
 const phase0ContentZhTW: PhaseContent = {
   phaseId: 0,

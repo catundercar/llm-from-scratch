@@ -1,8 +1,8 @@
-export type { Phase, PhaseContent, Lesson, ContentBlock, ContentSection, CodeExercise, LessonReference, Architecture, ArchitectureLayer, Principle, Deliverable } from "./types";
-export { getPhases, architecture, getPrinciples, dataFlowSteps } from "./phases";
-import { getAllPhaseContent } from "./lessons";
-import type { PhaseContent, Lesson } from "./types";
-import type { Locale } from "../i18n/LocaleContext";
+export type { Phase, PhaseContent, Lesson, ContentBlock, ContentSection, CodeExercise, LessonReference, Architecture, ArchitectureLayer, Principle, Deliverable } from "@/data/types";
+export { getPhases, architecture, getPrinciples, dataFlowSteps } from "@/data/phases";
+import { getAllPhaseContent } from "@/data/lessons";
+import type { PhaseContent, Lesson } from "@/data/types";
+import type { Locale } from "@/i18n";
 
 export function getPhaseContent(phaseId: number, locale: Locale = "zh-CN"): PhaseContent | undefined {
   return getAllPhaseContent(locale).find((p) => p.phaseId === phaseId);

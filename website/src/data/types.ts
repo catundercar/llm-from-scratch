@@ -17,6 +17,12 @@ export interface Phase {
   concepts: string[];
   readings: string[];
   deliverable: Deliverable;
+  loc?: number;
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  prerequisites?: number[];
+  layer?: string;
+  keyInsight?: string;
+  coreAddition?: string;
 }
 
 export interface ArchitectureLayer {
@@ -65,6 +71,8 @@ export interface Lesson {
   exercises: CodeExercise[];
   acceptanceCriteria: string[];
   references: LessonReference[];
+  problemStatement?: string;
+  beforeAfter?: { component: string; before: string; after: string }[];
 }
 export interface PhaseContent {
   phaseId: number; color: string; accent: string; lessons: Lesson[];

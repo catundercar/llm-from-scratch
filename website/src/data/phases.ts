@@ -1,5 +1,5 @@
-import type { Phase, Architecture, Principle } from "./types";
-import type { Locale } from "../i18n";
+import type { Phase, Architecture, Principle } from "@/data/types";
+import type { Locale } from "@/i18n";
 
 const phasesZhTW: Phase[] = [
   {
